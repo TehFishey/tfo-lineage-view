@@ -1,0 +1,60 @@
+{
+    "name" : "Silent Selene",
+    "ref" : "tVmDc",
+    "mother" : {
+        "name" : "Vivid Fire",
+        "ref" : "c25zU",
+        "mother" : {
+            "name" : "Lavender Trail",
+            "ref" : "mWdit",
+            "mother" : {
+                "name" : "Rhapsody",
+                "ref" : "I686m"
+            },
+            "father" : {
+                "name" : "Cave Guardian",
+                "ref" : "nxjW8"
+            }
+        },
+        "father" : {
+            "name" : "Ancestral Beast",
+            "ref" : "Nql7y",
+            "mother" : {
+                "name" : "Water Beast",
+                "ref" : "Gau3E"
+            },
+            "father" : {
+                "name" : "Celestial Incarnate",
+                "ref" : "QSeJ5"
+            }
+        }
+    },
+    "father" : {
+        "name" : "Precise Instinct",
+        "ref" : "8xQtk",
+        "mother" : {
+            "name" : "Shine River",
+            "ref" : "yNIXN",
+            "mother" : {
+                "name" : "Dark Roam",
+                "ref" : "rSan3"
+            },
+            "father" : {
+                "name" : "Albino Might",
+                "ref" : "OIkOA"
+            }
+        },
+        "father" : {
+            "name" : "White Sands",
+            "ref" : "CqeFC",
+            "mother" : {
+                "name" : "Wild Cute",
+                "ref" : "9nR17"
+            },
+            "father" : {
+                "name" : "Santana",
+                "ref" : "gyoSI"
+            }
+        }
+    }
+}

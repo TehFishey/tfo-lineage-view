@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Pedigree from './components/PedigreeRoot';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+fetch(`creature.json`)
+.then((r) => r.json())
+.then((data) =>{
+    ReactDOM.render(
+      <React.StrictMode>
+        <Pedigree data={data}/>
+      </React.StrictMode>, 
+      document.getElementById('pedigree-root'));
+});
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

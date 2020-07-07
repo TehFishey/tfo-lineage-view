@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Oxygen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f68ae92d13.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <title>tVmDc's Pedigree - The Final Outpost</title>
+</head>
+<body>
+    <div class="jumbotron text-center" id="headerimg">
+        <a href="/">
+            <img src="assets/img/ui/logo.svg" class="img-fluid" alt="The Final Outpost" style="height:114px; width:300px;">
+        </a>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-dark" style="font-weight:bold;">
+        <a class="navbar-brand" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/lab">Lab</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shelter">Shelter</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Inventory </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/inventory">Inventory</a>
+                        <a class="dropdown-item" href="/questinventory">Quest Inventory</a>
+                        <a class="dropdown-item" href="/store">Store</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/breed">Breeding</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> World </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/world">Lab Notes</a>
+                        <a class="dropdown-item" href="/science">Genome Splicer</a>
+                        <a class="dropdown-item" href="/trade">Trading</a>
+                        <a class="dropdown-item" href="/market">Market</a>
+                        <a class="dropdown-item" href="/quests">Quests</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://forum.finaloutpost.net" target='_BLANK'>Forums</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                <span class="dropdown">
+                    <button class="btn dropdown-toggle notificationView" style="background-color:transparent; padding:0px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="far fa-bell" style="color:white;"></i>
+                    </button>
+                    <span id="notificationList" class="dropdown-menu dropdown-menu-sm-right" aria-labelledby="dropdownMenuButton">
+                        <center>
+                            <img src="assets/img/ui/25.png">
+                        </center>
+                    </span>
+                </span>
+                 &bull;
+                <a href='/store'>
+                    152 gold
+                    <img src='assets/img/ui/coins.png' className='pixel'>
+                </a>
+                 &bull;
+                <span class="dropdown">
+                    <button class="btn dropdown-toggle" style="background-color:transparent; padding:0px;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span style="color:white;">
+                            USERNAME
+                            <i class="fas fa-sort-down"></i>
+                        </span>
+                    </button>
+                    <span class="dropdown-menu dropdown-menu-sm-right" aria-labelledby="dropdownMenuButton">
+                        <ul style="list-style:none;">
+                            <li>
+                                <i class="fas fa-user" style="margin-right:5px;"></i>
+                                <a href="/account" class="dropDownMenuItem"> Account</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-question-circle"></i>
+                                <a href="/help" class="dropDownMenuItem"> Help</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-sign-out-alt" style="margin-right:5px;"></i>
+                                <a href="/logout.php" class="dropDownMenuItem">Logout</a>
+                            </li>
+                        </ul>
+                    </span>
+                </span>
+            </span>
+        </div>
+    </nav>
+    <div id="main" style='width:max-content;margin-left:auto;margin-right:auto;'>
+        <center>
+            <h3></h3>
+            <h3>tVmDc's Pedigree</h3>
+            <div style='display:inline-block'>
+                <div className='tree'>
+                    <ul>
+                        <li>
+                            <div>
+                                <a href='#'>
+                                    <a href='/view/tVmDc'>
+                                        <img src='assets/img/tVmDc.png' className='pixel lineageTile'>
+                                        <br>
+                                        Silent Selene
+                                    </a>
+                            </div>
+                            </a>
+                            <ul>
+                                <li>
+                                    <div>
+                                        <a href='#'>
+                                            <a href='/view/c25zU'>
+                                                <img src='assets/img/c25zU.png' className='pixel lineageTile'>
+                                                <br>
+                                                Vivid Fire
+                                            </a>
+                                    </div>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <a href='#'>
+                                                    <a href='/view/mWdit'>
+                                                        <img src='assets/img/mWdit.png' className='pixel lineageTile'>
+                                                        <br>
+                                                        Lavender Trail
+                                                    </a>
+                                            </div>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <div>
+                                                        <a href='#'>
+                                                            <a href='/view/I686m'>
+                                                                <img src='assets/img/I686m.png' className='pixel lineageTile'>
+                                                                <br>
+                                                                Rhapsody
+                                                            </a>
+                                                    </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <a href='#'>
+                                                            <a href='/view/nxjW8'>
+                                                                <img src='assets/img/nxjW8.png' className='pixel lineageTile'>
+                                                                <br>
+                                                                Cave Guardian
+                                                            </a>
+                                                    </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <a href='#'>
+                                                    <a href='/view/Nql7Y'>
+                                                        <img src='assets/img/Nql7Y.png' className='pixel lineageTile'>
+                                                        <br>
+                                                        Ancestral Beast
+                                                    </a>
+                                            </div>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <div>
+                                                        <a href='#'>
+                                                            <a href='/view/Gau3E'>
+                                                                <img src='assets/img/Gau3E.png' className='pixel lineageTile'>
+                                                                <br>
+                                                                Water Beast
+                                                            </a>
+                                                    </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <a href='#'>
+                                                            <a href='/view/QSeJ5'>
+                                                                <img src='assets/img/QSeJ5.png' className='pixel lineageTile'>
+                                                                <br>
+                                                                Celestial Incarnate
+                                                            </a>
+                                                    </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>
+                                        <a href='#'>
+                                            <a href='/view/8xQtk'>
+                                                <img src='assets/img/8xQtk.png' className='pixel lineageTile'>
+                                                <br>
+                                                Precise Instinct
+                                            </a>
+                                    </div>
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <div>
+                                                <a href='#'>
+                                                    <a href='/view/yNIxN'>
+                                                        <img src='assets/img/yNIxN.png' className='pixel lineageTile'>
+                                                        <br>
+                                                        Shine River
+                                                    </a>
+                                            </div>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <div>
+                                                        <a href='#'>
+                                                            <a href='/view/rSan3'>
+                                                                <img src='assets/img/rSan3.png' className='pixel lineageTile'>
+                                                                <br>
+                                                                Dark Roam
+                                                            </a>
+                                                    </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <a href='#'>
+                                                            <a href='/view/OIkOA'>
+                                                                <img src='assets/img/OIkOA.png' className='pixel lineageTile'>
+                                                                <br>
+                                                                Albino Might
+                                                            </a>
+                                                    </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div>
+                                                <a href='#'>
+                                                    <a href='/view/CqeFC'>
+                                                        <img src='assets/img/CqeFC.png' className='pixel lineageTile'>
+                                                        <br>
+                                                        White Sands
+                                                    </a>
+                                            </div>
+                                            </a>
+                                            <ul>
+                                                <li>
+                                                    <div>
+                                                        <a href='#'>
+                                                            <a href='/view/9nR17'>
+                                                                <img src='assets/img/9nR17.png' className='pixel lineageTile'>
+                                                                <br>
+                                                                Wild Cute
+                                                            </a>
+                                                    </div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <div>
+                                                        <a href='#'>
+                                                            <a href='/view/gyoSI'>
+                                                                <img src='assets/img/gyoSI.png' className='pixel lineageTile'>
+                                                                <br>
+                                                                Santana
+                                                            </a>
+                                                    </div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </center>
+        <hr>
+        <center>
+             Users online: 1 &bull;
+            <a href='/credits'>Credits</a>
+            <br>
+             The current server time is SOMETIME on SOMEDATE.
+            <br>
+            <a href='/terms'>Terms and Conditions</a>
+             &bull;
+            <a href='/help'>Help</a>
+        </center>
+    </div>
+</body>
+</html>
