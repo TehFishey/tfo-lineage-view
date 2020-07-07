@@ -1,0 +1,150 @@
+.pedigree-root {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.tree ul {
+    padding-top: 20px;
+    position: relative;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition:all .5s;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.tree li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    width:max-content;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.tree li::after, .tree li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 1px solid #ccc;
+    width: 50%;
+    height:20px
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left:1px solid #ccc
+}
+
+.tree li:only-child::after, .tree li:only-child::before {
+    display:none
+}
+
+.tree li:only-child {
+    padding-top:0
+}
+
+.tree li:first-child::before, .tree li:last-child::after {
+    border:0 none
+}
+
+.tree li:last-child::before {
+    border-right: 1px solid #ccc;
+    border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius:0 5px 0 0
+}
+
+.tree li:first-child::after {
+    border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius:5px 0 0 0
+}
+
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #ccc;
+    width: 0;
+    height:20px
+}
+
+.tree li a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #666;
+    font-family: arial, verdana, tahoma;
+    font-size: 11px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition:all .5s
+}
+
+.pedigree-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.pt-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.pt-imgframe {
+    overflow: hidden;
+}
+
+.pt-label {
+    width: 90px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pt-parents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-inline-start: 0px;
+}
+
+.tree .g1 {}
+
+.tree .g2 {
+    width: 80px;
+    height: 80px;
+}
+
+.tree .g3 {
+    width: 75px;
+    height: 75px;
+}
+
+.tree .g4 {
+    width: 70px;
+    height: 70px;
+}
+
+.tree .g5 {
+    width: 65px;
+    height: 65px;
+}
+
+.tree .g6 {
+    width: 60px;
+    height: 60px;
+}
